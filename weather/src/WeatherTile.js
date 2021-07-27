@@ -19,7 +19,7 @@ export default class WeatherTile extends Component {
                     </div>
                     <div>
                         <h1 id="temp">{city.current.temp_c}<span className="small">&#x2103;</span></h1>
-                        <p>Feels Like:<span>{city.current.feelslike_c}</span></p>
+                        <p>Feels Like: <span>{city.current.feelslike_c}</span></p>
                     </div>
                 </div>
                 <div className="row_flex">
