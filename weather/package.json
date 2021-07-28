@@ -1,6 +1,6 @@
 {
   "name": "weather",
-  "homepage": "https://rameeshroshan.github.io/weatherapp/",
+  "homepage": "http://rameeshroshan.github.io/weatherapp/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
