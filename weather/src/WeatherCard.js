@@ -15,7 +15,12 @@ class WeatherCard extends React.Component{
         e.preventDefault();
         let input=document.getElementById("cityname").value;
         let list = JSON.parse(localStorage.getItem("list"));
-        list.push(input);
+        if(list){
+            list.push(input);
+        }
+        else{
+            list=[input];
+        }
         localStorage.setItem("list",JSON.stringify(list));
         Promise.all(list.map((city,i)=>{
             return(
@@ -56,11 +61,10 @@ class WeatherCard extends React.Component{
 
     componentDidMount(){
         let list = JSON.parse(localStorage.getItem("list"));
-        list.push("bangalore");
-        list.push("mumbai");
-        localStorage.setItem("list",list);
-        console.log(list);
-        if(list.length>0){
+        if(list){
+            // list.push("bengaluru");
+            // localStorage.setItem("list",list);
+            // console.log(list);
             Promise.all(list.map((city,i)=>{ //wrap in ternary
                 return(
                     fetch(`https://api.weatherapi.com/v1/current.json?key=2179903f2c2940eb89b202319211306&q=${city}&aqi=no`)
