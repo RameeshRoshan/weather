@@ -19,7 +19,7 @@ class WeatherCard extends React.Component{
         localStorage.setItem("list",JSON.stringify(list));
         Promise.all(list.map((city,i)=>{
             return(
-                fetch(`http://api.weatherapi.com/v1/current.json?key=2179903f2c2940eb89b202319211306&q=${city}&aqi=no`)
+                fetch(`https://api.weatherapi.com/v1/current.json?key=2179903f2c2940eb89b202319211306&q=${city}&aqi=no`)
                 .then(response=>{
                     return response.json();
                 })
@@ -58,7 +58,7 @@ class WeatherCard extends React.Component{
         let list = JSON.parse(localStorage.getItem("list"));
         Promise.all(list.map((city,i)=>{
             return(
-                fetch(`http://api.weatherapi.com/v1/current.json?key=2179903f2c2940eb89b202319211306&q=${city}&aqi=no`)
+                fetch(`https://api.weatherapi.com/v1/current.json?key=2179903f2c2940eb89b202319211306&q=${city}&aqi=no`)
                 .then(response=>{
                     return response.json();
                 })
