@@ -62,9 +62,6 @@ class WeatherCard extends React.Component{
     componentDidMount(){
         let list = JSON.parse(localStorage.getItem("list"));
         if(list){
-            // list.push("bengaluru");
-            // localStorage.setItem("list",list);
-            // console.log(list);
             Promise.all(list.map((city,i)=>{ //wrap in ternary
                 return(
                     fetch(`https://api.weatherapi.com/v1/current.json?key=2179903f2c2940eb89b202319211306&q=${city}&aqi=no`)
