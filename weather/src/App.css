@@ -71,7 +71,7 @@
 }
 #close:hover{
   color: rgb(177, 241, 224);
-  background: rgba(248, 4, 4, 0.9);
+  background: #F05945;
 }
 
 body{
@@ -91,6 +91,17 @@ body{
   border: none;
   border-radius: 7px;
   width: 200px;
+}
+#cityname:hover{
+  animation: bright ease-out 0.4s forwards;
+}
+@keyframes bright{
+  0%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0.8;
+  }
 }
 
 #condition{
@@ -175,4 +186,25 @@ p{
 
 .smallfont{
   font-size: .9em;
+}
+
+.clear{
+  font-size: 1.2em;
+  color: grey;
+  padding: 15px;
+  margin: 20px;
+  background-color: rgba(180, 172, 172, 0.0);
+  float: right;
+  border: 1px solid grey;
+  border-radius: 15px;
+}
+.clear:hover{
+  color: black;
+}
+
+.center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
